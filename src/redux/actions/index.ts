@@ -1,6 +1,7 @@
 import { ADD_ACTIVITY, DELETE_ACTIVITY, TOGGLE_MODAL, EDIT_ACTIVITY, SAVE_EDITTED_ACTIVITY } from './action-types';
+import { IActivity } from '../../types/types';
 
-export const AddActicity = (activity: any) => {
+export const AddActicity = (activity: IActivity) => {
 	return {
 		type: ADD_ACTIVITY,
 		activity
@@ -28,7 +29,7 @@ export const EditActivity = (id: number) => {
 	};
 };
 
-export const SaveEdittedactivity = (activity: any, id: number) => {
+export const SaveEdittedactivity = (activity: IActivity, id: number) => {
 	return {
 		type: SAVE_EDITTED_ACTIVITY,
 		activity,
