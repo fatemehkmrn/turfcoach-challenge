@@ -2,7 +2,7 @@ import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useSelector } from 'react-redux';
 import ActionIcon from '../actionIcon/action-icon';
-import { IActivity, IDataGridActivity, IState } from '../../../types/types';
+import { IDataGridActivity, IState } from '../../../types/types';
 
 const columns = [
 	{ field: 'type', headerName: 'Activity Type', width: 100 },

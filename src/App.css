@@ -1,0 +1,5 @@
+body {
+  height: 100%;
+  background-image: url('../public/assets//pitch.jpg');
+  background-size: cover;
+}
