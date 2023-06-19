@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+}
+
+.title {
+	margin-right: 20px;
+	text-align: left;
+}
+
+.value {
+	font-weight: bold;
+	padding-right: 3px;
+}

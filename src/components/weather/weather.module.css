@@ -1,0 +1,30 @@
+.weather {
+	background-color: rgb(191, 229, 229);
+	margin: 50px auto;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.current {
+	border-bottom: 1px solid #444;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+
+.time {
+	font-size: 12px;
+	color: #444;
+	margin-top: 10px;
+}
+
+.precipitation {
+	overflow-x: scroll;
+	display: flex;
+	background-color: #a5ccd0;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 15px;
+}
