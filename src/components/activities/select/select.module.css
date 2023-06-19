@@ -1,0 +1,9 @@
+.select {
+	text-align: left;
+}
+
+.select-box {
+	display: block;
+	margin: 5px 0 10px 0;
+	width: 157px;
+}
