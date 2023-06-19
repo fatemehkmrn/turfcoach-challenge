@@ -2,7 +2,7 @@ import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useSelector } from 'react-redux';
 import ActionIcon from '../actionIcon/action-icon';
-import { IActivity, IState } from '../../../types/types';
+import { IActivity, IDataGridActivity, IState } from '../../../types/types';
 
 const columns = [
 	{ field: 'type', headerName: 'Activity Type', width: 100 },
@@ -20,7 +20,7 @@ const columns = [
 		sortable: false,
 		width: 100,
 		disableClickEventBubbling: true,
-		renderCell: (params: any) => {
+		renderCell: (params: { row: IDataGridActivity }) => {
 			return (
 				<div className="d-flex justify-content-between align-items-center">
 					<ActionIcon index={params.row.id} actionType="edit" />
@@ -34,7 +34,7 @@ const columns = [
 		sortable: false,
 		width: 100,
 		disableClickEventBubbling: true,
-		renderCell: (params: any) => {
+		renderCell: (params: { row: IDataGridActivity }) => {
 			return (
 				<div className="d-flex justify-content-between align-items-center">
 					<ActionIcon index={params.row.id} actionType="delete" />
@@ -44,7 +44,7 @@ const columns = [
 	}
 ];
 const ActivitiesList = () => {
-	const activities = useSelector<{ activities: IState }, IActivity[]>((state) => state.activities.list);
+	const activities = useSelector<{ activities: IState }, IDataGridActivity[]>((state) => state.activities.list);
 
 	return <DataGrid rows={activities} columns={columns} />;
 };
