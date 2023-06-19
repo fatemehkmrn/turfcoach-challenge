@@ -8,39 +8,38 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
+I have not any experiences with Docker, YET! :) but you can run the app locally by typing npm start in command.\
+Then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `follow up questions:`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What libraries did you use? What are they used for? Why did you choose them
+specifically?
+- I used Material UI for some UI components, as it is known for its fast prototyping that leads to speed up the development speed when creating UI. It helped me to spend most of my time on the logic of this task rather than wrangling with CSS-related interface elements.
+- I also used React Hook form, because it has a high performance, it has no dependencies and is lightweight, and also can be easily integrated with any UI-library.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+What improvements or new features would you add if you had more time to work on
+the problem?
+- If I had more time to spand on this project, I would handle api error alerts, loadings and placeholders, empty state for activities table and would wite tests for my UI. for now, I was satisfied with a unit test in my utilities folder, as I believe the functions are the most important parts to consider while writing tests.
+- Also I would definitely spend more time on design, and used mui components more carefully. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Which parts did you find most difficult and which parts did you spend the most time
+with?
+- Considering all parts, I spent more time and effort on writing and testing the part that requires to avoid user to define activities on a same pitch at the same time, while defining a new activity or editing an existing one.
 
-### `npm run eject`
+What are key things to consider when deploying this application for customer
+use/production?
+- we are avoiding users from defining activities on a same pitch at the same time. I think when deploying such app to production, we need to consider the same for task performers, too. I mean we need to check one task is assigned to each person at a same time.
+- Plus, all options must be fetched from an api call. 
+- Also, there shold be an api to return pre-defined activities to display on the client side.  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
