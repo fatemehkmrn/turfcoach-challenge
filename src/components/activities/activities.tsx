@@ -21,12 +21,13 @@ const Activities = () => {
         }
     }
 
-    return (<Box className={s.activities}>
+    return (
+      <Box className={s.activities}>
         <div>Click to add a new activity</div>
         <ControlPointRoundedIcon onClick={() => dispatch(ToggleModal(true))} />
         <ActivitiesList />
         <ActivityModal isOpen={isModalOpen} handleClose={() => dispatch(ToggleModal(false))} handleActivitySubmit={onSubmit} />
-    </Box>)
+      </Box>)
 }
 
 export default Activities
