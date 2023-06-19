@@ -21,7 +21,7 @@ const ActionIcon = ({ actionType, index }: IActionIconProps) => {
 		<FormControlLabel
 			label=""
 			control={
-				<IconButton color="secondary" aria-label="add an alarm" onClick={handleClick}>
+				<IconButton color="secondary" onClick={handleClick}>
 					{actionType === 'edit' ? <EditIcon /> : <DeleteIcon />}
 				</IconButton>
 			}

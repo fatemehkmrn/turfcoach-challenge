@@ -9,7 +9,7 @@ import { ACTIVITY_TYPES, TIMES, TASK_ASSIGNEES, PITCHES } from '../../../constan
 import Select from '../select/select';
 import 'react-datepicker/dist/react-datepicker.css';
 import s from './activity-modal.module.css';
-import { IActivity, IActivityModalProps, IState, IDataGridActivity, ISelectProps } from '../../../types/types';
+import { IActivityModalProps, IState, IDataGridActivity } from '../../../types/types';
 
 const ActivityModal = ({ isOpen, handleClose, handleActivitySubmit }: IActivityModalProps) => {
 	const dispatch = useDispatch();
@@ -33,7 +33,6 @@ const ActivityModal = ({ isOpen, handleClose, handleActivitySubmit }: IActivityM
 	);
 
 	const onSubmitData = (data: IDataGridActivity): void => {
-    console.log('data',data)
 		const info: IDataGridActivity = selectedRow ? { ...selectedRow, ...data } : data;
 		const isSelectedPitchOccupied = pitchTimingController(list, info, Boolean(!selectedRow));
 		setIsPitchOccupied(isSelectedPitchOccupied);
@@ -60,19 +59,7 @@ const ActivityModal = ({ isOpen, handleClose, handleActivitySubmit }: IActivityM
 		});
 		setDate(dateChange);
 	};
-  // const Select = React.forwardRef(({ onChange, name, label, options } : ISelectProps, ref) => (
-  //   <div className={s.select}>
-  //     <label>{label}</label>
-  //     <select name={name} ref={ref} onChange={onChange} className={s['select-box']}>
-  //     <option value="">Select your option</option>
-  //       {options?.map(item=><option value={item} key={item}>{item}</option>)}
-  //     </select>
-  //   </div>
-  // ));
 
-  // Select.displayName = 'Select'
-
-console.log(errors)
 	return (
 		<Modal open={isOpen} aria-labelledby="modal-modal-title">
 			<Box className={s.modal}>

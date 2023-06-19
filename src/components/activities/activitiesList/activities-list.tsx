@@ -22,7 +22,7 @@ const columns = [
 		disableClickEventBubbling: true,
 		renderCell: (params: any) => {
 			return (
-				<div className="d-flex justify-content-between align-items-center" style={{ cursor: 'pointer' }}>
+				<div className="d-flex justify-content-between align-items-center">
 					<ActionIcon index={params.row.id} actionType="edit" />
 				</div>
 			);
@@ -36,7 +36,7 @@ const columns = [
 		disableClickEventBubbling: true,
 		renderCell: (params: any) => {
 			return (
-				<div className="d-flex justify-content-between align-items-center" style={{ cursor: 'pointer' }}>
+				<div className="d-flex justify-content-between align-items-center">
 					<ActionIcon index={params.row.id} actionType="delete" />
 				</div>
 			);
