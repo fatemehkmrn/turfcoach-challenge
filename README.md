@@ -29,6 +29,19 @@ the problem?
 - If I had more time to spand on this project, I would handle api error alerts, loadings and placeholders, empty state for activities table and would wite tests for my UI. for now, I was satisfied with a unit test in my utilities folder, as I believe the functions are the most important parts to consider while writing tests.
 - Also I would definitely spend more time on design, and used mui components more carefully. 
 
+- In activity-modal.tsx, there is a piece of code as below:
+	if (selectedRow) {
+			setValue('assignee', selectedRow.assignee);
+			setValue('type', selectedRow.type);
+			setValue('time', selectedRow.time);
+			setValue('pitch', selectedRow.pitch);
+			setDate(selectedRow.date);
+			setValue('date', selectedRow.date);
+		}
+
+I tried to set values at once in one object and actually there is a solution, but I guess because the input fields were not the same (one date picker and some select boxes) it did not work properly, and in some scenarios there were some bugs. So although I knew setting values at once was more efficient, I decided to do it as above to make sure everything works as it should. 
+But, If I had more Time to spend, I would find a solution to avoid above-mentioned coding style.
+
 Which parts did you find most difficult and which parts did you spend the most time
 with?
 - Considering all parts, I spent more time and effort on writing and testing the part that requires to avoid user to define activities on a same pitch at the same time, while defining a new activity or editing an existing one.
